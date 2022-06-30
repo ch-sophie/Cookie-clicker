@@ -1,0 +1,529 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    touch-action: manipulation;
+}
+.loading{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.letter{
+    color: #484848;
+    font-size: 80px;
+    letter-spacing: 15px;
+    margin-bottom: 150px;
+    animation: flash 1.2s linear infinite;
+}
+/* loading page animation */
+@keyframes flash{
+    0%{
+        color: #fff900;
+        text-shadow: 0 0 7px #fff900;
+    }
+    90%{
+        color: #484848;
+        text-shadow: none;
+    }
+    100%{
+        color: #fff900;
+        text-shadow: 0 0 7px #fff900;
+    }
+}
+.letter:nth-child(1){
+    animation-delay: 0.1s;
+}
+.letter:nth-child(2){
+    animation-delay: 0.2s;
+}
+.letter:nth-child(3){
+    animation-delay: 0.3s;
+}
+.letter:nth-child(4){
+    animation-delay: 0.4s;
+}
+.letter:nth-child(5){
+    animation-delay: 0.5s;
+}
+.letter:nth-child(6){
+    animation-delay: 0.6s;
+}
+.letter:nth-child(7){
+    animation-delay: 0.7s;
+}
+.fonduOut{
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+body{
+    background-image: url(./assets/galaxy.webp);
+    background-size: contain;
+    background-repeat: repeat;
+    color: white;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    letter-spacing: 2px;
+    margin: 1%;
+    user-select: none;
+    animation: StarsAnimation 75s linear infinite;
+}
+/* Background animation */
+@keyframes StarsAnimation {
+    0%  {background-position: 0 0;}
+    100%  {background-position: -2122px 0;}
+  }
+.title{
+    opacity: 0.18;
+}
+.mainContainer{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+/* Bonus container */
+.score{
+    grid-column: 3;
+    color: #ffbe01;
+    margin: 1%;
+    margin-right:10%;
+    position: relative;  
+}
+.scoreLeft {
+    grid-column: 1;
+    grid-row: 1;
+    color:#ffbe01;
+    /* margin: 1%; */
+    position: relative;
+}
+.scoreLeft li {
+    display: flex;
+    list-style-type: none;
+    margin-left: 10%;
+    margin-bottom: 36%;
+}
+.score li{
+    display: flex;
+    list-style-type: none;
+    margin-right: 10%;
+    margin-bottom: 27%;  
+}
+.bonus1, .bonus2, .bonus3{
+    justify-content: flex-end;
+    padding: 3%;
+}
+.bonus4, .bonus5, .bonus6{
+    justify-content: flex-start;
+    padding-left: 5%;
+    padding-bottom: 10%;
+    margin: 10%;
+}
+.nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5, .nombreBonus6 {
+    margin-top: 16%;
+}
+/* Main click container */
+.mainBtn{
+    background: none;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 3%;
+    grid-column: 2;
+    border-radius: 100%;
+    touch-action:double-tap-zoom;
+}
+.mainCounter{
+    justify-content: center;
+    padding: 1%;
+    margin: 5%;
+    grid-column: 2;
+}
+.mainCounter img{
+    transform: translateY(0px);
+    animation: float 6s ease-in-out infinite;
+}
+/* main button animation */
+@keyframes float {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.mainBtn img{
+    height: auto; 
+    cursor: pointer;
+    margin-top: 10%;
+    touch-action: double-tap-zoom;
+}
+.counter{
+    display: flex;
+    width: 50%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    font-size:xx-large;
+    margin: auto;
+    margin-top: -1%;
+}
+.secondsContainer{
+    display: flex;
+    justify-content: center;
+    
+}
+.perSeconds{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+}
+.mainCounter p{
+    font-size: 3em;
+}
+.mainContainer > .counter{
+    justify-self: center;
+    align-self: center;
+}
+.button1, .button2, .button3{
+    padding-right: 5%;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    letter-spacing: 1px;
+    text-align: right;
+    opacity: 0.9;
+}
+.button4, .button5, .button6{
+    padding-left: 5%;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    letter-spacing: 1px;
+    text-align: right;
+    opacity: 0.9;
+}
+.button {
+    cursor: pointer;
+}
+.imageEarth, .imageMoon, .imageVenus, .imageNeptune, .imageSun, .imageLottery {
+    animation: rotation 6s infinite linear;
+}
+/* bonus animation */
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+/* Younes */
+/*  Desactiver les button */
+.ouvert{
+    background-color: green;
+    color: aliceblue;
+}
+.img-nonColor { 
+    filter: grayscale();
+}
+.green{
+    background-color: green;
+}
+.white{
+    color: white;
+}
+/* Processus de bonus */
+.container-timer{
+    width: 50px;
+    height: 350px;
+    position: absolute;
+    margin-top: 100px;
+    border: solid 1px gray;
+    transform: rotate(180deg);
+}
+.show{
+    width: 120px;
+    height: 80px;
+}
+.hidden1{
+    position: absolute;
+    z-index: 2000;
+}
+.hidden2{
+    position: absolute;
+    z-index: 2000;
+}
+.hidden3{
+    position: absolute;
+    z-index: 2000;
+}
+.desabled{
+    display: none;
+}
+.reverse-timer{
+    overflow: auto;
+    animation: timer 30s linear forwards;
+}
+@keyframes timer{
+    0%{
+        width: 100%;
+        height: 100%;
+        background-color: #008000;
+    }
+    25%{
+        height: 70%;
+        background-color: #008000;
+    }
+    50%{
+        height: 50%;
+        background-color: #ee82ee;
+    }
+    70%{
+        height: 25%;
+        background-color: #d11414;
+    }
+    100%{
+        height: 0%;
+        background-color: #980f0a;
+    }
+}
+/* secound count bonus */
+.secound-count{
+    position: absolute;
+    transform: rotate(180deg);
+}
+/* bonus display instructions on hover */
+.hide {
+    display: none;
+    margin: 25% 28% 15% 5%;
+    z-index: 2;
+    text-align: left;
+}
+.hide2 {
+    display: none;
+    margin: 28% 28% 5% 5%;
+    z-index: 2;
+    text-align: right;
+}
+.elementHide:hover + .hide {
+    display: inline-block;
+    position: absolute;
+    color:#ffbe01;
+    font-size: 0.7em;
+}
+.elementHide {
+    margin-right: 20%;
+    text-align: left;
+}
+.elementHide2 {
+    margin-left: 40%;
+}
+.elementHide2:hover + .hide2 {
+    display: inline-block;
+    position: absolute;
+    color:#ffbe01;
+    font-size: 0.7em;
+}
+.multiplier5, .multiplier4, .multiplier3, .multiplier2, .multiplier1, .multiplier6 {
+    display: none;
+}
+.bonus1:hover {
+    color:#4169e1;
+}
+.bonus2:hover {
+    color:#969494;
+}
+.bonus3:hover {
+    color:#db143c;
+}
+.bonus4:hover {
+    color:#749fee;
+}
+.bonus5:hover {
+    color:#ff4400;
+}
+.bonus6:hover {
+    color:#523f38;
+}
+
+.bonus1 span, .bonus2 span, .bonus3 span, .bonus4 span, .bonus5 span, .bonus6 span{
+    position: absolute;
+    /* float: right;  */
+    margin-left: 5px;
+} 
+
+.disabled-img{
+    filter: grayscale();
+}
+
+/* Media screen */
+@media screen and (min-width:300px) and (max-width: 768px) {
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .elementHide, .elementHide2{
+        display:none;
+    }
+    .title {
+        font-size: large;
+    }
+    .mainImage{
+        width: 90%;
+        touch-action: manipulation;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .score{
+        margin-right:0;
+    }
+    .score li{
+        margin-left: 3%;
+        margin-bottom: 3%;
+        margin-right: 4%;
+    }
+    .scoreLeft li{
+        margin-bottom: 0;
+        margin-left: 6%;
+    }
+    .bonus4, .bonus5, .bonus6{
+        padding-left:1%;
+        margin: 6%;
+    }
+    .nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5, .nombreBonus6 {
+        margin-top: 9%;
+    }
+    .bonus1 span, .bonus2 span, .bonus3 span, .bonus4 span, .bonus5 span, .bonus6 span{
+        position: absolute;
+        /* float: right;  */
+        font-size: xx-small;
+    } 
+    .loading{
+        display: grid;
+        grid-template-rows: minmax(50px, auto);
+        background-repeat: no-repeat;
+        overflow: hidden;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .containerLetter{
+        justify-self: center;
+        grid-row:1;
+    }
+    .letter{
+        font-size: 20px;
+        letter-spacing: 10px;
+    }
+    .imgLoaderContainer{
+        grid-row:2;
+        margin-top: -50px;
+    }
+    .imgLoaderContainer img{
+        margin-top: -100px;
+    }  
+}
+
+@media screen and (min-width:301px) and (max-width:500px) {
+    .nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5, .nombreBonus6 {
+        margin-top: 13%;
+        margin-left:-3%;
+        font-size: xx-small;
+    }
+    .bonus1 span, .bonus2 span, .bonus3 span, .bonus4 span, .bonus5 span, .bonus6 span{
+        position: absolute;
+        /* float: right;  */
+        font-size: xx-small;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .elementHide, .elementHide2 {
+        display:none;
+    }
+    .title {
+        font-size: medium;
+    }
+    .mainImage{
+        width: 80%;
+        touch-action: manipulation;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+    }
+    .score li{
+        margin-left: 3%;
+        margin-bottom: 3%;
+        margin-right: 5%;
+    }
+    .bonus1 span, .bonus2 span, .bonus3 span, .bonus4 span, .bonus5 span, .bonus6 span{
+        position: absolute;
+        /* float: right; */
+        margin-left: 5px;
+        font-size:xx-small;
+    }
+    .nombreBonus1, .nombreBonus2, .nombreBonus3, .nombreBonus4, .nombreBonus5, .nombreBonus6 {
+        display: none;
+    }
+}
+@media screen and (min-width: 413px) and (max-width: 737px){
+    .mainContainer{
+        margin-top: -45px;
+    }
+}
+
+/* LOTTERY ANIMATION */
+#idBonus6
+{
+    visibility: hidden;
+}
+
+/* alert button */
+.buttonMain {
+    text-align: center;
+}
+#buttonPlay{
+    color:#ffffff;
+    font-size: large;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    letter-spacing: 2px;
+}
+#buttonPlay:hover{
+    color:#ffbe01;
+}
+
+a:link{
+    color:#ffffff;
+}
+a:visited{
+    color:#ffffff;
+}
+a:hover{
+    color:#ffbe01;
+}
+.icons{
+    font-size: 135%;
+}
