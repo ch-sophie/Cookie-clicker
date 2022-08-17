@@ -5,7 +5,7 @@
 - Naïm Saidi     
 - Younes Sheikhlar    
    
-### Link:  https://saidi-naim.github.io/Cookie-Clicker/
+### Link:  https://ch-sophie.github.io/Cookie-clicker/
 ### The mission:     
  The challenge is to create a Cookie Clicker (game) as a team. (https://orteil.dashnet.org/cookieclicker/) We made a variant of the game, Space-themed. 
 #### Where: BeCode Brussels
